@@ -11,6 +11,7 @@ public class Q4 {
 
         int num;
 
+        // Ask user to enter a number
         do 
         {
             System.out.print("Enter a non-negative number 0-20: ");
@@ -23,12 +24,14 @@ public class Q4 {
 
         } while (num < 0 || num > 20);   
 
+        //factorial computation
         long fac = 1;
         for (int i = 1; i <= num; i++) 
         {
             fac *= i;
         }
 
+        //check validity of mode
         int mode;
         do 
         {
@@ -44,6 +47,7 @@ public class Q4 {
 
         System.out.printf("\n\nFactorial of %d is %d \n", num, fac);
 
+        // using switch to print output of mode based on user choice.
         switch (mode) 
         {
             case 1:
@@ -57,6 +61,7 @@ public class Q4 {
                 break;
         }
 
+        // using random to print tip of the day
         Random r = new Random();
         int tips = r.nextInt(3);
 
@@ -74,3 +79,5 @@ public class Q4 {
         }
     }
 }
+
+
