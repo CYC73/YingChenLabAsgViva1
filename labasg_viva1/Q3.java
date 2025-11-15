@@ -18,6 +18,7 @@ public class Q3 {
             String bi = s.nextLine();
 
             if(bi.equalsIgnoreCase("STOP")) {
+                System.out.println("\n");
                 break;
             }
             
@@ -25,7 +26,7 @@ public class Q3 {
             for(int i = 0; i < bi.length(); i++) {
                 char c = bi.charAt(i);
                 if(c != '0' && c != '1') {
-                    System.out.println("Invalid value, only 0 and 1 allowed");
+                    System.out.println("Invalid code: must contain only 0s and 1s. ");
                     value = false;
                     break;
                 }
@@ -40,7 +41,7 @@ public class Q3 {
             for(int i = 0; i < bi.length(); i++) {
                 char c = bi.charAt(bi.length() - 1 - i);
                 if(c == '1') {
-                    dec += Math.pow(2, i); 
+                    dec += (int)Math.pow(2, i); 
                 }
             }
 
@@ -75,9 +76,9 @@ public class Q3 {
         }
 
         if(iMCount > 0) {
-            System.out.printf("Iron Man Team: %d codes | Average Power: %.2f\n", iMCount, (double)sumIM / iMCount);
+            System.out.printf("\nIron Man Team: %d codes | Average Power: %.2f\n", iMCount, (double)sumIM / iMCount);
         } else {
-            System.out.println("Iron Man Team: 0 codes | Average Power: 0");
+            System.out.println("\nIron Man Team: 0 codes | Average Power: 0");
         }
 
         if(cACount > 0) {
